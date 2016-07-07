@@ -39,6 +39,7 @@ http POST http://127.0.0.1:5000/api/add ip=192.168.1.1 -a eyJhbGciOiJIUzI1NiIsIm
 - admin : http://ft.vietoss.com:6699
 
 user : test
+
 pass : test
 
 
