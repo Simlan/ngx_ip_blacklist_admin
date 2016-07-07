@@ -1,0 +1,36 @@
+{% extends "dashboard/layout.html" %}
+{% block theme_js_files %}
+    <script type="text/javascript" src="../../static/assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/pages/form_inputs.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+
+            <div class="panel-body">
+
+
+                <form class="form-horizontal" method="post" action="">
+                    <fieldset class="content-group">
+                        <legend class="text-bold">Add ip</legend>
+
+                        <div class="form-group">
+                            <label class="control-label col-lg-2 text-bold">IP to Blacklist</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" name="ipb">
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="text-right">
+                        <button type="submit" name="submit" value="sumit" class="btn btn-primary">ADD<i
+                                class="icon-arrow-right14 position-right"></i></button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

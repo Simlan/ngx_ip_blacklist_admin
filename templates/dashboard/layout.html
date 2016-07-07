@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ManhND App</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+          type="text/css">
+    <link href="../../static/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="../../static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/assets/css/core.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/assets/css/components.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/assets/css/colors.min.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="../../static/assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/core/libraries/jquery_ui/core.min.js"></script>
+    <!-- /core JS files -->
+
+
+    <!-- Theme JS files -->
+    {% block theme_js_files %}{% endblock %}
+    <!-- /theme JS files -->
+
+
+</head>
+
+<body>
+
+<!-- Main navbar -->
+<div class="navbar navbar-inverse bg-info-700 navbar-component" style="position: relative; z-index: 30;">
+    <div class="navbar-header ">
+        <a class="navbar-brand" href="/"><img src="../../static/assets/images/logo_light.png" alt=""></a>
+
+        <ul class="nav navbar-nav pull-right visible-xs-block">
+            <li><a data-toggle="collapse" data-target="#navbar-demo-mobile"><i class="icon-grid3"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-demo-mobile">
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            {#            <li><a href="/tools">Thêm đơn hàng</a></li>#}
+            {#            <li><a href="#">Đơn hàng</a></li>#}
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="/list">List</a></li>
+                    <li><a href="/add">Add</a></li>
+
+
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- /main navbar -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title">
+                        <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span>
+                            - {{ page_name }}</h4>
+                    </div>
+
+
+                </div>
+
+                <div class="breadcrumb-line">
+                    <ul class="breadcrumb">
+                        <li><a href="/"><i class="icon-home2 position-left"></i> Home</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!-- /page header -->
+            <!-- Content area -->
+            <div class="content">
+                {% block content %}{% endblock %}
+
+
+                <!-- Footer -->
+                <div class="footer text-muted">
+                    &copy; 2016. <a href="https://vietoss.com">VietOSS</a> by <a
+                        href="https://VietOSS.com"
+                        target="_blank">VietOSS</a>
+                </div>
+                <!-- /footer -->
+
+            </div>
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+
+
+</body>
+</html>

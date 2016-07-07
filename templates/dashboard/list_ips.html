@@ -1,0 +1,44 @@
+{% extends "dashboard/layout.html" %}
+{% block theme_js_files %}
+    <script type="text/javascript" src="../../static/assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/pages/form_inputs.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr class="bg-blue">
+                        <th>#</th>
+                        <th>IP</th>
+                        <th>Delete</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% set count = 1 %}
+                    {% for ip in ips %}
+                        <tr>
+                            <td><b>{{ count }}</b></td>
+                            {% set count = count + 1 %}
+                            <td>{{ ip }}</td>
+                            <td><a
+                                    href="/delete/{{ ip }}"
+                                    onclick="return confirm('Are you sure you want to delete this item?'); "><i
+                                    class="icon-trash"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
