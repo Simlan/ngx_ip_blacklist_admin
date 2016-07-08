@@ -7,11 +7,10 @@ import config.settings
 from modules.ip_blacklist.controllers import ip_bl
 from modules.ip_blacklist_api.controllers import api
 
-app = Flask(__name__)
-app.config.from_object(config.settings)
-redis_store.init_app(app)
+application = Flask(__name__)
+application.config.from_object(config.settings)
+redis_store.init_app(application)
 
-db.init_app(app)
-app.register_blueprint(ip_bl)
-app.register_blueprint(api)
-
+db.init_app(application)
+application.register_blueprint(ip_bl)
+application.register_blueprint(api)
