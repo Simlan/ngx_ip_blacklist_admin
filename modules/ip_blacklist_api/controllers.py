@@ -9,7 +9,7 @@ from config.redis import redis_store
 
 from include.ultils import validate_ip
 
-api = Blueprint('api', __name__)
+api = Blueprint('api', __name__, template_folder='templates')
 
 auth = HTTPBasicAuth()
 
